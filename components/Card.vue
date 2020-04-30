@@ -25,7 +25,7 @@
         </div>
       </div>
       <div class="right">
-        <carousel :perPage="1" :paginationActiveColor="links.color">
+        <carousel v-if="images.length > 0" :perPage="1" :paginationActiveColor="links.color">
           <slide v-for="(image, index) in images" :key="index">
             <img v-bind:src="image"/>
           </slide>
@@ -66,7 +66,7 @@ export default {
 <style scoped>
 .card {
   width: 960px;
-  height: 400px;
+  /* height: 400px; */
   background: radial-gradient(118.99% 670.46% at -7.06% -9.5%, #FFFFFF 0%, #F1F1F1 100%);
   box-shadow: 20px 20px 60px rgba(0, 0, 0, 0.05), -20px -20px 60px rgba(255, 255, 255, 0.66);
   border-radius: 20px;
@@ -76,7 +76,8 @@ export default {
 }
 
 .left {
-  width: 330px;
+  width: 320px;
+  margin-right: 10px;
   display: flex;
   justify-content: space-between;
   flex-direction: column;
@@ -89,7 +90,7 @@ export default {
 .contents {
   display: flex;
   padding: 64px 48px;
-  height: 100%;
+  /* height: 100%; */
 }
 
 .right {
@@ -111,7 +112,7 @@ p {
 }
 
 .buttons {
-
+  margin-top: 32px;
 }
 
 .button {
@@ -120,6 +121,7 @@ p {
   margin-right: 20px;
   font-size: 18px;
   border-radius: 24px;
+  line-height: 40px;
 
   /* position: absolute;
   bottom: 56px; */
@@ -129,7 +131,8 @@ p {
   content: "";
   height: 100%;
   width: 100%;
-  background: linear-gradient(145deg, rgba(0,0,0,0.05), rgba(255,255,255,0.2));;
+  background: linear-gradient(145deg, rgba(0,0,0,0.05), rgba(255,255,255,0.2));
+  mix-blend-mode: luminosity;
   position: absolute;
   left: 0;
   top: 0;

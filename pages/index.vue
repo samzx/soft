@@ -52,16 +52,16 @@ export default {
       {
         accolade: "2,000 Peak MAU",
         name: "MPH Watch",
-        copy: ["Stats for cryptocurrency miners mining on Mining Pool Hub.", "Clean and simple interface for monitoring mining activity."],
+        copy: ["Clean and simple interface for monitoring cryptocurrency mining activity on Mining Pool Hub. "],
         links: {
           color: "#7793C7",
           primary: {
-            name: "Visit",
-            url: "http://mphwatch.samxie.net/"
+            name: "Demo",
+            url: "http://mphwatch.samxie.net/demo"
           },
           secondary: {
-            name: "Github",
-            url: "https://github.com/samzx/mphwatch"
+            name: "Login",
+            url: "http://mphwatch.samxie.net/"
           }
         },
         images: [
@@ -69,9 +69,9 @@ export default {
         ]
       },
       {
-        accolade: "Virtual Reality",
+        accolade: "Unique locomotion",
         name: "Final Slash VR",
-        copy: ["A short survival experience on an abandoned planet."],
+        copy: ["A short survival experience on an abandoned planet with fluid locomotion."],
         links: {
           color: "#588372",
           primary: {
@@ -80,9 +80,28 @@ export default {
           },
         },
         images: [
+          "https://img.itch.zone/aW1hZ2UvNDQ5OTA1LzIyNzcwMTAucG5n/794x1000/fEFaLA.png",
           "https://res.cloudinary.com/xielabs/image/upload/v1563021446/1.png",
-          "https://img.itch.zone/aW1hZ2UvNDQ5OTA1LzIyNzcwMTEucG5n/794x1000/aTuPbj.png",
           "https://img.itch.zone/aW1hZ2UvNDQ5OTA1LzIyNzcwMTMucG5n/794x1000/62X0V0.png"
+        ]
+      },
+      {
+        name: "More works on",
+        links: {
+          color: "#363636",
+          primary: {
+            name: "Github",
+            url: "https://github.com/samzx"
+          },
+          secondary: {
+            name: "Medium",
+            url: "https://medium.com/sam-xie"
+          },
+        },
+        images: [
+          // "https://res.cloudinary.com/xielabs/image/upload/v1563021446/1.png",
+          // "https://img.itch.zone/aW1hZ2UvNDQ5OTA1LzIyNzcwMTEucG5n/794x1000/aTuPbj.png",
+          // "https://img.itch.zone/aW1hZ2UvNDQ5OTA1LzIyNzcwMTMucG5n/794x1000/62X0V0.png"
         ]
       }
     ],
