@@ -97,12 +97,7 @@ export default {
             name: "Medium",
             url: "https://medium.com/sam-xie"
           },
-        },
-        images: [
-          // "https://res.cloudinary.com/xielabs/image/upload/v1563021446/1.png",
-          // "https://img.itch.zone/aW1hZ2UvNDQ5OTA1LzIyNzcwMTEucG5n/794x1000/aTuPbj.png",
-          // "https://img.itch.zone/aW1hZ2UvNDQ5OTA1LzIyNzcwMTMucG5n/794x1000/62X0V0.png"
-        ]
+        }
       }
     ],
     links: [

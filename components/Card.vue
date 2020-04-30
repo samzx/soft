@@ -6,7 +6,7 @@
           <h2>{{accolade}}</h2>
           <h1>{{name}}</h1>
           <div v-if="windowWidth <= 980" class="carousel-container mobile">
-            <carousel v-if="images.length > 0" :perPage="1" :paginationActiveColor="links.color">
+            <carousel v-if="images" :perPage="1" :paginationActiveColor="links.color">
               <slide v-for="(image, index) in images" :key="index">
                 <img v-bind:src="image"/>
               </slide>
@@ -32,7 +32,7 @@
         </div>
       </div>
       <div v-if="windowWidth > 980" class="carousel-container desktop">
-        <carousel v-if="images.length > 0" :perPage="1" :paginationActiveColor="links.color">
+        <carousel v-if="images" :perPage="1" :paginationActiveColor="links.color">
           <slide v-for="(image, index) in images" :key="index">
             <img v-bind:src="image"/>
           </slide>
@@ -116,7 +116,7 @@ export default {
   margin: auto;
 }
 .carousel-container.mobile {
-
+ margin: auto;
 }
 
 h1 {
