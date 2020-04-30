@@ -132,6 +132,12 @@ a {
   padding: 5px;
   font-size: 24px;
   text-decoration: none;
+  transform: translateY(0px);
+  transition: 0.3s transform ease-out;
+}
+.mail:hover {
+  transform: translateY(-5px);
+  transition: 0.2s transform ease-out;
 }
 .cards {
   margin-top: -80px;

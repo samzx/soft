@@ -25,7 +25,7 @@
         </div>
       </div>
       <div class="right">
-        <carousel :perPage="1">
+        <carousel :perPage="1" :paginationActiveColor="links.color">
           <slide v-for="(image, index) in images" :key="index">
             <img v-bind:src="image"/>
           </slide>
@@ -181,13 +181,15 @@ img {
     bottom: 0;
 }
 .VueCarousel-dot {
-  height: 5px !important;
+  /* height: 5px !important;
   width: 20px !important;
-  border-radius: 20px !important;
+  border-radius: 20px !important; */
   outline: none !important;
+  transition: 0.3s background-color ease-in-out;
 }
 .VueCarousel-dot--active {
-  background-color:#555 !important;
+  /* background-color:#555 !important; */
+  transition: 0.3s background-color ease-in-out;
   outline: none !important;
 }
 </style>
