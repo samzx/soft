@@ -66,27 +66,6 @@ h2 {
   margin: 16px 0px;
 }
 
-a {
-  color: #3B70A2;
-  text-decoration: none;
-  position: relative;
-}
-
-.linked::after {
-  width: 0%;
-  content: "";
-  height: 3px;
-  background: #3B70A2;
-  position: absolute;
-  left: 0;
-  bottom: -3px;
-  transition: width 0.3s;
-}
-
-.linked:hover::after {
-  width: 100%;
-}
-
 @media screen and (max-width: 980px) {
   .container {
     padding-top: 120px;
