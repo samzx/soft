@@ -30,7 +30,6 @@ export default {
   height: 800px;
   width: 100%;
   min-width: 400px;
-  max-width: 1600px;
   margin: auto;
 }
 
@@ -78,6 +77,11 @@ h2 {
   }
   h1 {
     font-size: 72px;
+  }
+
+  .text-container {
+    width: 360px;
+    margin: auto;
   }
 }
 </style>

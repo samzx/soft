@@ -18,7 +18,7 @@ export default {
 
 <style scoped>
 .footer {
-  width: 960px;
+  max-width: 960px;
   margin: 64px auto;
   padding: 0px 48px;
   display: flex;
@@ -31,4 +31,12 @@ export default {
 .slash {
   margin: 0 8px;
 }
+
+@media screen and (max-width: 980px) {
+  .footer {
+    padding: 0px 20px;
+    width: 400px;
+  }
+}
+
 </style>

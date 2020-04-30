@@ -5,6 +5,13 @@
         <div class="copy">
           <h2>{{accolade}}</h2>
           <h1>{{name}}</h1>
+          <div v-if="windowWidth <= 980" class="carousel-container mobile">
+            <carousel v-if="images.length > 0" :perPage="1" :paginationActiveColor="links.color">
+              <slide v-for="(image, index) in images" :key="index">
+                <img v-bind:src="image"/>
+              </slide>
+            </carousel>
+          </div>
           <p v-for="(text, index) in copy" :key="index" class="copy-description">{{text}}</p>
         </div>
         <div class="buttons">
@@ -24,7 +31,7 @@
           >{{links.secondary.name}}</a>
         </div>
       </div>
-      <div class="right">
+      <div v-if="windowWidth > 980" class="carousel-container desktop">
         <carousel v-if="images.length > 0" :perPage="1" :paginationActiveColor="links.color">
           <slide v-for="(image, index) in images" :key="index">
             <img v-bind:src="image"/>
@@ -59,6 +66,19 @@ export default {
       }
     },
     images: Array
+  },
+  data() {
+    return {
+        windowWidth: window.innerWidth
+    }
+  },
+  mounted() {
+    window.addEventListener('resize', () => {
+      this.windowWidth = window.innerWidth
+    })
+  },
+  beforeDestroy() {
+      window.removeEventListener('resize', () => {});
   }
 }
 </script>
@@ -66,7 +86,6 @@ export default {
 <style scoped>
 .card {
   width: 960px;
-  /* height: 400px; */
   background: radial-gradient(118.99% 670.46% at -7.06% -9.5%, #FFFFFF 0%, #F1F1F1 100%);
   box-shadow: 20px 20px 60px rgba(0, 0, 0, 0.05), -20px -20px 60px rgba(255, 255, 255, 0.66);
   border-radius: 20px;
@@ -93,9 +112,11 @@ export default {
   /* height: 100%; */
 }
 
-.right {
-  width: 500px;
+.carousel-container.desktop {
   margin: auto;
+}
+.carousel-container.mobile {
+
 }
 
 h1 {
@@ -172,8 +193,30 @@ img {
   box-shadow: -10px -10px 30px rgba(255, 255, 255, 0.15), 10px 10px 30px rgba(0, 0, 0, 0.05);
   border-radius: 10px;
   overflow: hidden;
-  height: 280px;
+  height: 275px;
   width: 500px;
+}
+@media screen and (max-width: 980px) {
+  .contents {
+    padding: 40px 20px;
+    width: 400px;
+    margin: 0;
+  }
+  .left {
+    width: 360px;
+  }
+  .card {
+    width: 400px;
+  }
+  .VueCarousel {
+    width: 360px;
+    height: 198px;
+    margin: 20px 0px;
+  }
+  .copy-description {
+    margin-bottom: 0;
+    margin-top: 32px
+  }
 }
 
 </style>
