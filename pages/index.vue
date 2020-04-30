@@ -1,8 +1,7 @@
 <template>
-  <div class="container">
-    <div>
-      <hero/>
-    </div>
+  <div>
+    <hero/>
+    <a class="mail" href="mailto:contact@samxie.net">✉️</a>
   </div>
 </template>
 
@@ -16,6 +15,15 @@ export default {
 }
 </script>
 
-<style>
-
+<style scoped>
+.mail {
+  position: sticky;
+  float: right;
+  bottom: 20px;
+  right: 20px;
+  margin-top: -40px;
+  padding: 5px;
+  font-size: 24px;
+  text-decoration: none;
+}
 </style>
