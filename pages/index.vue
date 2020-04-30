@@ -1,7 +1,9 @@
 <template>
   <div>
-    <hero/>
-    <div class="cards">
+    <hero
+      v-bind:author="author"
+    />
+    <div class="cards" id="products">
       <card
         v-for="(product, index) in products" :key="index"
         v-bind:accolade="product.accolade"
@@ -43,7 +45,8 @@ export default {
         },
         images: [
           "https://res.cloudinary.com/xielabs/image/upload/v1586508529/wordcloud.png",
-          "https://res.cloudinary.com/xielabs/image/upload/v1586508528/activity.png"
+          "https://res.cloudinary.com/xielabs/image/upload/v1586508528/activity.png",
+          "https://res.cloudinary.com/xielabs/image/upload/v1588248717/Group_9.jpg"
         ]
       },
       {
@@ -102,6 +105,10 @@ export default {
 </script>
 
 <style>
+html {
+  scroll-behavior: smooth;
+}
+
 a {
   color: #3B70A2;
   text-decoration: none;

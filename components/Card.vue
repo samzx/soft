@@ -157,11 +157,8 @@ p {
   transition: 0.3s box-shadow ease-in-out;
 }
 
-
-
 img {
-  height: 280px;
-  width: 500px;
+  width: 100%;
   float: right;
   object-fit: cover;
   object-position: top;
@@ -172,6 +169,8 @@ img {
   box-shadow: -10px -10px 30px rgba(255, 255, 255, 0.15), 10px 10px 30px rgba(0, 0, 0, 0.05);
   border-radius: 10px;
   overflow: hidden;
+  height: 280px;
+  width: 500px;
 }
 
 </style>
