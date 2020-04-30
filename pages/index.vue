@@ -41,7 +41,10 @@ export default {
             url: "https://messengerlytics.com/"
           }
         },
-        images: ["https://res.cloudinary.com/xielabs/image/upload/v1586508529/wordcloud.png"]
+        images: [
+          "https://res.cloudinary.com/xielabs/image/upload/v1586508529/wordcloud.png",
+          "https://res.cloudinary.com/xielabs/image/upload/v1586508528/activity.png"
+        ]
       },
       {
         accolade: "2,000 Peak MAU",
@@ -58,7 +61,9 @@ export default {
             url: "https://github.com/samzx/mphwatch"
           }
         },
-        images: ["https://res.cloudinary.com/xielabs/image/upload/v1541582260/mphwatch.png"]
+        images: [
+          "https://res.cloudinary.com/xielabs/image/upload/v1541582260/mphwatch.png",
+        ]
       },
       {
         accolade: "Virtual Reality",
@@ -71,7 +76,11 @@ export default {
             url: "https://samzx.itch.io/final-slash-vr"
           },
         },
-        images: ["https://res.cloudinary.com/xielabs/image/upload/v1563021446/1.png"]
+        images: [
+          "https://res.cloudinary.com/xielabs/image/upload/v1563021446/1.png",
+          "https://img.itch.zone/aW1hZ2UvNDQ5OTA1LzIyNzcwMTEucG5n/794x1000/aTuPbj.png",
+          "https://img.itch.zone/aW1hZ2UvNDQ5OTA1LzIyNzcwMTMucG5n/794x1000/62X0V0.png"
+        ]
       }
     ],
     links: [

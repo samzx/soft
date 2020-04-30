@@ -25,14 +25,24 @@
         </div>
       </div>
       <div class="right">
-        <img v-if="images.length > 0" v-bind:src="images[0]"/>
+        <carousel :perPage="1">
+          <slide v-for="(image, index) in images" :key="index">
+            <img v-bind:src="image"/>
+          </slide>
+        </carousel>
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import { Carousel, Slide } from 'vue-carousel';
+
 export default {
+  components: {
+    Carousel,
+    Slide
+  },
   props: {
     accolade: String,
     name: String,
@@ -66,7 +76,7 @@ export default {
 }
 
 .left {
-  flex: 1;
+  width: 330px;
   display: flex;
   justify-content: space-between;
   flex-direction: column;
@@ -83,7 +93,8 @@ export default {
 }
 
 .right {
- flex: 1.61;
+  width: 500px;
+  margin: auto;
 }
 
 h1 {
@@ -151,10 +162,32 @@ p {
 img {
   height: 280px;
   width: 500px;
-  box-shadow: -10px -10px 30px rgba(255, 255, 255, 0.15), 10px 10px 30px rgba(0, 0, 0, 0.05);
-  border-radius: 10px;
   float: right;
   object-fit: cover;
   object-position: top;
+  cursor: grab;
+}
+
+.VueCarousel {
+  box-shadow: -10px -10px 30px rgba(255, 255, 255, 0.15), 10px 10px 30px rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+</style>
+<style>
+.VueCarousel-pagination {
+    position: absolute;
+    bottom: 0;
+}
+.VueCarousel-dot {
+  height: 5px !important;
+  width: 20px !important;
+  border-radius: 20px !important;
+  outline: none !important;
+}
+.VueCarousel-dot--active {
+  background-color:#555 !important;
+  outline: none !important;
 }
 </style>
